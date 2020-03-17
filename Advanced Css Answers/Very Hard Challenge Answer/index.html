@@ -1,0 +1,65 @@
+<!-- 
+Very Hard: Create a newspaper component using HTML and Sass while following BEM guidelines. 
+The newspaper should contain at least: -Bold headline at the top -3 Columns -2 Images -2 Modifier Classes -1 
+Use of psuedo-elements (:before/:after) The contents of the newspaper are up to you, lorem ipsum text is acceptable 
+ 
+-Bold Headline: "WORLD WAR FINALLY OVER" (line 41)
+-3 Columns: article__column1, atricle__column2, and article__column3 (line 42, 48, 54)
+-2 Images: img 1 and 2 (line 51, 57)
+-2 Modifier Classes: column2__text--bold and article__img--grayscale (line 52, 57)
+-1 psuedo-element: .column1__footer:before,
+                   .column2__footer:after{} 
+                   I created two lines above and below text for a cool seperation effect 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VERY HARD CHALLENGE ANSWER</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">THE NEW YORK TRIBUNE</h1>
+            <div class="header__subtitle">
+                <h2>VOLUME V - NUMBER VII</h2>
+                <h2>TUESDAY, MAY 4, 1945</h2>
+                <h2>THREE CENTS PER COPY</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="article">
+                <h2 class="article__heading">WORLD WAR FINALLY OVER</h2>
+                <!-- column 1 -->
+                <div class="article__column1">
+                    <h3 class="column1__heading">Support Your Troops</h3>
+                    <p class="column1__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos cupiditate consectetur, eos provident Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente aspernatur fugiat minus hic laudantium ad asperiores, </p>
+                    <h3 class="column1__footer">SUMMARY TEXT</h3>
+                </div>
+                <!-- column 2 -->
+                <div class="article__column2">
+                    <p class="column2__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente aspernatur fugiat minus hic laudantium ad asperiores, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente aspernatur fugiat minus hic laudantium ad asperiores, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente aspernatur fugiat minus hic laudantium ad asperiores, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi halberd container</p>
+                    <img class="article__img" src="imgs/sea-people-service-uniform-40820.jpg" alt="soldier photo">
+                    <p class="column2__text--bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, accusamus? Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+                <!-- column 3 -->
+                <div class="article__column3">
+                    <h3 class="column3__heading">War's Impact Still Raging</h3>
+                    <img class="article__img--grayscale" src="imgs/adult-army-battle-black-and-white-404995.jpg" alt="turret photo">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia velit eligendi optio repudiandae aut id velLorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente aspernatur fugiat minus hic laudantium ad asperiores, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sapiente</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

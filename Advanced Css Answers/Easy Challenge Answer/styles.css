@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(221, 221, 221);
+    display:flex;
+    justify-content: center;
+}
+
+table {
+    height: 817px;
+    width: 1432px;
+    position: relative;
+    border-collapse: collapse;
+}
+
+ img{
+    max-width:100%;
+    position: absolute;
+    z-index:2;
+    top:0;
+    left:3px;
+}
+
+.red{
+    background-color: red;
+}
+
+.white{
+    background-color: #fff;
+}
