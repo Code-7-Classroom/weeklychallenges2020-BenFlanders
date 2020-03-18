@@ -14,24 +14,37 @@ var operator = prompt('Please select an operator (+, -, X, /)');
   if(operator === '+')
   {
 // Logging calculation result. Using Concatenation to read full statement
-    console.log(firstNumber + ' plus ' + secondNumber + 
-        ' equals ' + (firstNumber + secondNumber));
+    add(firstNumber, secondNumber);
+  } else if (operator === '-'){
+    subtract(firstNumber, secondNumber);
+  } else if(operator === '/') {
+    divide(firstNumber, secondNumber);
+  } else if(operator === 'X'){
+    multiply(firstNumber, secondNumber); 
+  } else {
+    console.log('please refresh and follow the instructions')
   }
-   
-  if(operator === '-')
-  {
-    console.log(firstNumber + ' minus ' + secondNumber + 
-        ' equals ' + (firstNumber - secondNumber));
-  }
-   
-  if(operator === '/')
-  {
-    console.log(firstNumber + ' divided by ' + secondNumber + 
-        ' equals ' + (firstNumber / secondNumber));
-  }
-   
-  if(operator === 'X')
-  {
-    console.log(firstNumber + ' times ' + secondNumber + 
-        ' equals ' + (firstNumber * secondNumber));
-  }
+
+  // Addition Function
+function add(firstNumber, secondNumber){
+  console.log(firstNumber + ' plus ' + secondNumber + ' equals ' + (firstNumber + secondNumber));
+  return firstNumber + secondNumber;
+}
+
+// Subtraction Function
+function subtract(firstNumber, secondNumber){
+  console.log(firstNumber + ' minus ' + secondNumber + ' equals ' + (firstNumber - secondNumber)); 
+  return firstNumber - secondNumber;
+}
+
+// Multiplication Function
+function multiply(firstNumber, secondNumber){
+  console.log(firstNumber + ' times ' + secondNumber + ' equals ' + (firstNumber * secondNumber)); 
+  return firstNumber * secondNumber;
+}
+
+// Division Function
+function divide(firstNumber, secondNumber){
+  console.log(firstNumber + ' divided by ' + secondNumber + ' equals ' + (firstNumber / secondNumber)); 
+  return firstNumber / secondNumber;
+}
