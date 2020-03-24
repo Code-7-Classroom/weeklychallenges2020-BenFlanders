@@ -25,7 +25,7 @@ var operator = prompt('Please select an operator (+, -, X, /)');
     console.log('please refresh and follow the instructions')
   }
 
-  // Addition Function
+// Addition Function
 function add(firstNumber, secondNumber){
   console.log(firstNumber + ' plus ' + secondNumber + ' equals ' + (firstNumber + secondNumber));
   return firstNumber + secondNumber;
