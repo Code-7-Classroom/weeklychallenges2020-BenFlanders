@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>AlwaysGametime Store | Contact</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+                <div class="side-nav-icons">
+                    <span class="open-slide">
+                        <a href="#" onclick="openSlideMenu()">
+                        <i class="fas fa-bars"></i>  
+                        </a>
+                    </span>
+                    <a href="index.html"><img src="imgs/blackLogo.png" alt="logo"></a>
+                </div>
+                <div id="side-menu">
+                    <div id="side-links">
+                        <a href="#" class="btn-close" style="font-size: 3.6rem;" onclick="closeSlideMenu()">&times;</a>
+                        <a href="index.html">HOME</a>
+                        <a href="products.html">PRODUCTS</a>
+                        <a href="contact.html">CONTACT</a>
+                        <div class="bottom-links">
+                            <label class="hidden" for="currency1">hidden</label>
+                            <select class="currency" id="currency1">
+                                <option value="usd">USD</option>
+                                <option value="usd">GBP</option>
+                                <option value="usd">EUR</option>
+                                <option value="usd">CAD</option>
+                                <option value="usd">AUD</option>
+                            </select>
+                            <a href="#" aria-label="profile"><i class="fas fa-user-circle"></i></a>
+                            <a href="#" aria-label="search"><i class="fas fa-search"></i></a>
+                            <a href="#" aria-label="shopping cart"><i class="fas fa-shopping-cart"></i></a>
+                        </div>  
+                    </div>
+                </div>
+            <div class="container">
+                <div class="all-links">
+                    <div class="main-links">
+                        <a href="index.html"><img src="imgs/blackLogo.png" alt="logo"></a>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="products.html">PRODUCTS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                    <div class="secondary-links">
+                        <label class="hidden" for="currency2">hidden</label>
+                        <select class="currency" id="currency2">
+                            <option value="usd">USD</option>
+                            <option value="usd">GBP</option>
+                            <option value="usd">EUR</option>
+                            <option value="usd">CAD</option>
+                            <option value="usd">AUD</option>
+                        </select>
+                        <a href="#" aria-label="profile"><i class="fas fa-user-circle"></i></a>
+                        <a href="#" aria-label="search"><i class="fas fa-search"></i></a>
+                        <a href="#" aria-label="shopping cart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>  
+                </div>
+            </div>  
+        </nav>
+    </header>
+
+    
+
+    <form  action="contact.html" method="GET" onsubmit="return validation()">
+        <h1>CONTACT US</h1>
+        <div class="form-field">
+            <label for="name">FULL NAME :</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-field">
+            <label for="e-mail">EMAIL :</label>
+            <input type="email" id="e-mail" required>
+        </div>
+        <div class="form-field">
+            <label for="order">ORDER NUMBER :</label>
+            <input type="text" id="order">
+        </div>
+        <div class="form-field">
+            <label for="message">MESSAGE :</label>
+            <textarea id="message" required></textarea>>
+        </div>
+        <div id="error_message"></div>
+        <button type="submit" class="submit">SUBMIT</button>
+    </form>
+
+    <section id="FAQ">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <h3 class="heading">PROCESSING AND SHIPPING</h3>
+        <div>
+            <p class="question">How long will it take for my order to be processed?</p>
+            <p class="answer">ORDERS ARE GENERALLY PROCESSED IN 24-48 HOURS. DURING HIGH VOLUME TIMES LIKE HOLIDAYS OR SPECIAL EVENTS, PROCESSING MAY TAKE AN EXTRA DAY.</p>
+        </div>
+        <div>
+            <p class="question">How long will it take for me to get my order?</p>
+            <p class="answer">SHIPPING TIMES VARY BASED ON WHERE YOU ARE. DOMESTIC ORDERS SHOULD ARRIVE IN 3-7 DAYS, WHILE INTERNATIONAL ORDERS MAY TAKE UP TO 14 DAYS. PLEASE CHECK YOUR TRACKING INFORMATION FOR THE MOST UP TO DATE INFORMATION. PLEASE KNOW SOME INTERNATIONAL ORDERS MAY BE DELAYED IN CUSTOMS AND THERE IS NOTHING WE CAN DO TO EXPEDITE THAT PROCESS.</p>
+        </div>
+        <div>
+            <p class="question">How do I see the current status of my order?</p>
+            <p class="answer">ONCE YOUR ORDER IS SENT OUT, AN EMAIL WILL BE SENT TO THE EMAIL ADDRESS USED TO CHECKOUT.</p>
+        </div>
+        <div>
+            <p class="question">I was charged Customs Fees or Duties! Why?</p>
+            <p class="answer">UNFORTUNATELY, ADDITIONAL CUSTOMS AND DUTIES CHARGES ARE OUTSIDE OF OUR CONTROL. WE APOLOGIZE FOR ANY INCONVENIENCE THIS MAY CAUSE BUT THERE IS NOTHING WE CAN DO. WE ARE UNABLE TO REFUND ANY CHARGES IN REGARDS TO CUSTOMS AND DUTIES.</p>
+        </div>
+        <h3 class="heading">PAYMENT, RETURNS, & REFUNDS</h3>
+        <div>
+            <p class="question">What payment methods do you support?</p>
+            <p class="answer">WE CURRENTLY ACCEPT ALL MAJOR CREDIT CARDS, PAYPAL, AND APPLE PAY.</p>
+        </div>
+        <div>
+            <p class="question">You all messed up, I received the wrong item, what should I do?</p>
+            <p class="answer">WHOOPS! PLEASE CONTACT US AT SUPPORT@ALWAYSGAMETIME. PLEASE INCLUDE YOUR ORDER #, A SUMMARY OF THE ISSUE AND ANY RELEVANT PHOTOS.</p>
+        </div>
+        <div>
+            <p class="question">What is the policy on returns?</p>
+            <p class="answer">WE HAVE A 14 DAY RETURN POLICY. PLEASE CONTACT US AT SUPPORT@ALWAYSGAMETIME.COM TO DISCUSS ANY REFUND. YOU ARE RESPONSIBLE FOR SHIPPING CHARGES ON RETURNS AND WE STRONGLY RECOMMEND GETTING TRACKING ON ANY PACKAGE YOU RETURN. PLEASE NOTE THAT SOME RETURNS/REFUNDS - SUCH AS DAMAGED PRODUCTS - MAY REQUIRE PHOTO PROOF BEFORE A REFUND IS PROCESSED. FOR MORE INFORMATION ON RETURNS PLEASE SEE OUR REFUND & RETURN POLICY.</p>
+        </div>
+        <div>
+            <p class="question">Oh shucks, my items arrived and it's damaged, what should I do?</p>
+            <p class="answer">OH NO! WE'RE SORRY ABOUT THAT. PLEASE CONTACT US AT SUPPORT@ALWAYSGAMETIME.COM. PLEASE INCLUDE YOUR ORDER #, A SUMMARY OF THE ISSUE AND ANY RELEVANT PHOTOS.</p>
+        </div>
+        <div>
+            <p class="question">Uh, my order is missing an item, what happened?</p>
+            <p class="answer">YIKES! THAT'S NOT GOOD, PLEASE EMAIL US AT SUPPORT@ALWAYSGAMETIME.COM AND WE WILL FIGURE OUT WHAT HAPPENED! PLEASE NOTE SOME LARGE ORDERS MAYBE SHIPPED IN TWO PACKAGES. IF THIS HAPPENS YOU SHOULD RECEIVE AN EMAIL ABOUT BOTH SHIPMENTS!</p>
+        </div>
+        <div>
+            <p class="question">You all set me the wrong size/color/product, what should I do?</p>
+            <p class="answer">OUR BAD! PLEASE EMAIL US AT SUPPORT@ALWAYSGAMETIME.COM SO THAT WE CAN FIX THIS.</p>
+        </div>
+        <div>
+            <p class="question">Do you guys ship to ______________?</p>
+            <p class="answer">WE WILL SHIP ANYWHERE WE CAN! FOR INFORMATION ON WHAT COUNTRIES WE ARE UNABLE TO SHIP TO, PLEASE CHECK OUT THIS LIST.</p>
+        </div>
+        <h3 class="heading">STOCK AND SALES</h3>
+        <div>
+            <p class="question">How often are items restocked?</p>
+            <p class="answer">WE TRY AND RESTOCK ITEMS ON A MONTHLY BASES. SOME HIGH DEMAND ITEMS, LIKE PURPLE HOODIES, MAY TAKE LONGER. PLEASE FOLLOW OUR TWITTER AND INSTAGRAM FOR UPDATES ON RESTOCKS. FINAL SALE ITEMS ARE GENERALLY BEING DISCONTINUED AND WILL NOT BE RESTOCKED.</p>
+        </div>
+        <div>
+            <p class="question">Do you have bulk discounts?</p>
+            <p class="answer">PLEASE NOTE THAT NONE OF OUR ITEMS ARE FOR AVAILABLE FOR RE-SALE. HOWEVER, IF YOU'RE LOOKING TO PLACE A LARGE ORDER, 25 SHIRTS OR MORE, YOU CAN CONTACT US AT SUPPORT@ALWAYSGAMETIME.COM TO DISCUSS DISCOUNTS AND OPTIONS.</p>
+        </div>
+        <div>
+            <p class="question">How often do you all do sales?</p>
+            <p class="answer">HOLIDAYS. PLEASE NOTE WE DO NOT PRICE ADJUST FOR SALE PRICES. PLEASE FOLLOW OUT TWITTER AND INSTAGRAM FOR UPDATES ON ANY AND ALL SALES WE HAVE.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-third">
+                    <div class="top">
+                        <h3>STAY CONNECTED WITH ALWAYSGAMETIME</h3>
+                        <p>MAIL: 1732 UPTOWN DRIVE, CHARLOTTE NC 28243</p>
+                        <p>EMAIL: SUPPORT@ALWAYSGAMETIME.COM</p>
+                    </div>
+                    <div class="middle">
+                        <h5>@ALWAYSGAMETIME</h5>
+                        <a aria-label="twitter" href="https://twitter.com/always_gametime"><i class="fab fa-twitter"></i></a>
+                        <a aria-label="youtube" href="https://youtube.com/alwaysgametime"><i class="fab fa-youtube"></i></a>
+                        <i class="fab fa-facebook"></i>
+                        <a aria-label="instagram" href="https://instagram.com/alwaysgametime"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-third">
+                    <h3>LINKS</h3>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">APPAREL</a></li>
+                        <li><a href="#">HATS</a></li>
+                        <li><a href="#">ACCESSORIES</a></li>
+                        <li><a href="#">SALE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-third">
+                    <h3>CUSTOMER CARE</h3>
+                    <ul>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">TRACK MY ORDER</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="footer-bottom">
+                <ul class="footer-bottom__links">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns and Exchanges Policy</a></li>
+                </ul>
+                <p>&copy; 2020 AlwaysGametime | All Rights Reserved</p>
+                <ul class="footer-bottom__icons">
+                    <li><i class="fab fa-cc-visa"></i></li>
+                    <li><i class="fab fa-cc-stripe"></i></li>
+                    <li><i class="fab fa-cc-paypal"></i></li>
+                    <li><i class="fab fa-cc-mastercard"></i></li>
+                    <li><i class="fab fa-cc-discover"></i></li>
+                    <li><i class="fab fa-cc-apple-pay"></i></li>
+                    <li><i class="fab fa-cc-amex"></i></li>
+                    <li><i class="fab fa-cc-amazon-pay"></i></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <h5>NEWSLETTER</h5>
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Enter your email address . . .">
+                <a href="#" class="email-button">SUBMIT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="form.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
