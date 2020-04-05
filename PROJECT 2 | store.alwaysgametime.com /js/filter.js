@@ -1,21 +1,23 @@
 loadAll();
 
+// Applies the 'show' class to each product element by default
 function loadAll() {
   var x, i;
   x = document.getElementsByClassName("product");
   for (i = 0; i < x.length; i++) {
-    w3AddClass(x[i], "show");
+    addClass(x[i], "show");
   }
 }
 
-function check(){
+// Gets the checked state of our checkboxes and determines which 'filter classes' to push into the arrays
+function check() {
   var checkApparel = document.getElementById('apparel').checked;
   var checkHats = document.getElementById('hats').checked;
   var checkAccessories = document.getElementById('accessories').checked;
   var checkLow = document.getElementById('low-cost').checked;
   var checkMedium = document.getElementById('medium-cost').checked;
   var checkHigh = document.getElementById('high-cost').checked;
-  
+
   let categoryFilters = [];
   let costFilters = [];
 
@@ -37,48 +39,50 @@ function check(){
   if (checkHigh) {
     costFilters.push('high-cost');
   }
-  
-  
+
+  // If no boxes are checked run 'loadAll' function. Otherwise pass filter arrays into 'filterFunction'.
   if (categoryFilters.length == 0 && costFilters.length == 0) {
     loadAll();
   } else {
-    customFunction(categoryFilters, costFilters);
+    filterFunction(categoryFilters, costFilters);
   }
-  
+
 }
 
-function customFunction(categoryFilters, costFilters) {
+// Checks 'product' elements against filter arrays to determine which products should be showing.
+function filterFunction(categoryFilters, costFilters) {
   var x, i;
   x = document.getElementsByClassName("product");
   document.getElementById('no-results').style.display = 'none';
 
-    if (categoryFilters.length == 0){
-        categoryFilters.push('');
-    }
+  // Add empty string to categoryFilters array to detect all product elements.
+  if (categoryFilters.length == 0) {
+    categoryFilters.push('');
+  }
 
+  // Loops through 'product' elements
   for (i = 0; i < x.length; i++) {
     let matchesFilter = false;
-    w3RemoveClass(x[i], "show");
-    //console.log(x[i].className);
+    // removes show class for all products
+    removeClass(x[i], "show");
+    // Loops through 'categoryFilters'
     for (var filter in categoryFilters) {
-      console.log(categoryFilters[filter]);
-      if (costFilters.length > 0){
-        for (var c in costFilters){
-            console.log(costFilters[c]);
-            if ((x[i].className.indexOf(categoryFilters[filter]) > -1) && (x[i].className.indexOf(costFilters[c]) > -1)){
-                matchesFilter=true;
-            }
+      if (costFilters.length > 0) {
+        // Loops through 'costFilters'
+        for (var c in costFilters) {
+          if ((x[i].className.indexOf(categoryFilters[filter]) > -1) && (x[i].className.indexOf(costFilters[c]) > -1)) {
+            matchesFilter = true;
+          }
         }
-      } 
+      }
       else {
-          if (x[i].className.indexOf(categoryFilters[filter]) > -1) matchesFilter=true;
+        if (x[i].className.indexOf(categoryFilters[filter]) > -1) matchesFilter = true;
+      }
+
     }
 
-  }
-    
     if (matchesFilter) {
-      w3AddClass(x[i], "show");
-      //console.log("Filter added to box #" + i);
+      addClass(x[i], "show");
     }
   }
 
@@ -86,8 +90,8 @@ function customFunction(categoryFilters, costFilters) {
 }
 
 
-// Show filtered elements
-function w3AddClass(element, name) {
+// Checks to see if 'name' is present on the element, applies 'name' if not present.
+function addClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -98,8 +102,8 @@ function w3AddClass(element, name) {
   }
 }
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
+// Checks to see if 'name' is present on the element, removes 'name' if present.
+function removeClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -111,9 +115,10 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-function checkForNoMatches(){
+// Applies block display styling to the 'no-results' element if there are no products with the 'show' class.
+function checkForNoMatches() {
   var x = document.getElementsByClassName('show');
-  if(x.length == 0){
+  if (x.length == 0) {
     document.getElementById('no-results').style.display = 'block';
   }
 }

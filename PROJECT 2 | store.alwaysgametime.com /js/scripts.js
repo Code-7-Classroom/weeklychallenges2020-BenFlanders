@@ -1,94 +1,106 @@
-const slides=document.querySelector(".slider").children;
-const prev=document.querySelector(".prev");
-const next=document.querySelector(".next");
-const indicator=document.querySelector(".indicator");
-let index=0;
+// Initializing variables
+const slides = document.querySelector(".slider").children;
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const indicator = document.querySelector(".indicator");
+let index = 0;
 
-prev.addEventListener("click", function(){
+// Add event listener to prev element
+prev.addEventListener("click", function () {
     prevSlide();
     updateCircleIndicator();
     resetTimer();
 })
 
-next.addEventListener("click", function(){
+// Add event listener to next element
+next.addEventListener("click", function () {
     nextSlide();
     updateCircleIndicator();
     resetTimer();
 })
 
- function circleIndicator(){
-    for(let i=0; i < slides.length; i++){
-        const div=document.createElement("div");
-            div.setAttribute("onclick", "indicateSlide(this)")
-            div.id=i;
-            if(i==0){
-                div.className="active";
-            }
-            indicator.appendChild(div);
+// creates the empty divs with onclick events for circle indicators
+function circleIndicator() {
+    for (let i = 0; i < slides.length; i++) {
+        const div = document.createElement("div");
+        div.setAttribute("onclick", "indicateSlide(this)")
+        div.id = i;
+        if (i == 0) {
+            div.className = "active";
+        }
+        indicator.appendChild(div);
     }
 }
 
 circleIndicator();
 
-function indicateSlide(element){
-    index=element.id;
+function indicateSlide(element) {
+    index = element.id;
     changeSlide();
     updateCircleIndicator();
     resetTimer();
 }
 
-function updateCircleIndicator(){
-    for(let i=0; i<indicator.children.length; i++){
+// updates active styling for circle indicators
+function updateCircleIndicator() {
+    for (let i = 0; i < indicator.children.length; i++) {
         indicator.children[i].classList.remove("active");
     }
     indicator.children[index].classList.add("active");
 }
 
-function prevSlide(){
-    if(index==0){
-        index=slides.length-1;
+// function sets index of slides
+function prevSlide() {
+    if (index == 0) {
+        index = slides.length - 1;
     }
-    else{
+    else {
         index--;
     }
     changeSlide();
 }
 
-function nextSlide(){
-   if(index==slides.length-1){
-       index=0;
-   }
-   else{
-       index++;
-   }
-   changeSlide();
+// function sets index of slides
+function nextSlide() {
+    if (index == slides.length - 1) {
+        index = 0;
+    }
+    else {
+        index++;
+    }
+    changeSlide();
 }
 
-function changeSlide(){
-    for(let i=0; i<slides.length; i++){
+// function removes active class from all slides and applies it to slide with 'index'
+function changeSlide() {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
     }
     slides[index].classList.add("active");
 }
 
-function resetTimer(){
+// resets timer 
+function resetTimer() {
     clearInterval(timer);
-    timer=setInterval(autoPlay, 10000);
+    timer = setInterval(autoPlay, 10000);
 }
 
-function autoPlay(){
+// runs 'nextSlide' and 'updateCircleIndicator' every 8000
+function autoPlay() {
     nextSlide();
     updateCircleIndicator();
 }
 
-let timer=setInterval(autoPlay, 8000);
+let timer = setInterval(autoPlay, 8000);
 
-function openSlideMenu(){
+// targets 'side-menu' element styling onClick
+function openSlideMenu() {
     document.getElementById('side-menu').style.width = '30rem';
-    document.getElementById('side-links').style.opacity= '1';
-  }
+    document.getElementById('side-links').style.opacity = '1';
+}
 
-  function closeSlideMenu(){
-    document.getElementById('side-menu').style.width = '0';  
-    document.getElementById('side-links').style.opacity= '0';
-  }
+// targets 'side-menu' element styling onClick
+function closeSlideMenu() {
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('side-links').style.opacity = '0';
+}
